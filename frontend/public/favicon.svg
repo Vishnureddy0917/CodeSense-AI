@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9277FF"/>
+      <stop offset="100%" stop-color="#5231c4"/>
+    </linearGradient>
+    <filter id="glowGreen">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowYellow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="120" height="120" rx="28" fill="url(#bgGradient)"/>
+  
+  <!-- Robot Head Outline -->
+  <rect x="25" y="40" width="70" height="55" rx="14" fill="none" stroke="#ffffff" stroke-width="8"/>
+  
+  <!-- Antenna Line -->
+  <path d="M 60 40 L 60 22" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Antenna Glowing Tip -->
+  <circle cx="60" cy="18" r="6" fill="#10B981" filter="url(#glowGreen)"/>
+  
+  <!-- Robot Eyes (Glowing) -->
+  <circle cx="43" cy="62" r="7" fill="#FDE047" filter="url(#glowYellow)"/>
+  <circle cx="77" cy="62" r="7" fill="#FDE047" filter="url(#glowYellow)"/>
+  
+  <!-- Robot Mouth (Code Brackets </>) -->
+  <path d="M 48 80 L 52 84 L 48 88" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 72 80 L 68 84 L 72 88" fill="none" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="63" y1="78" x2="57" y2="90" stroke="#ffffff" stroke-width="5.5" stroke-linecap="round"/>
+</svg>
